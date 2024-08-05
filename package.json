@@ -1,0 +1,35 @@
+{
+  "name": "jb",
+  "version": "1.0.0",
+  "description": "For description",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "setup-project": "npm i && cd client && npm i",
+    "setup-production-app": "npm i && cd client && npm i && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tanstack/react-query": "^5.51.18",
+    "@tanstack/react-query-devtools": "^5.51.18",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.4.0",
+    "concurrently": "^8.2.2",
+    "cookie-parser": "^1.4.6",
+    "datauri": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^7.1.0",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4"
+  }
+}
